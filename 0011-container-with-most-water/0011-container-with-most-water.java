@@ -7,6 +7,7 @@ class Solution {
             int area = ((height[left] > height[right]) ? height[right] : height[left]) * (right - left);
             max = (area > max) ? area : max;
             
+            //shift pntr with smaller value
             if (height[left] > height[right]) right--;
             else left++;
         }
