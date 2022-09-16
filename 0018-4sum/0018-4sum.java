@@ -12,7 +12,6 @@ class Solution {
                 int right = nums.length - 1;
                 while (left < right) {
                     long sum = (long)nums[i] + (long)nums[j] + (long)nums[left] + (long)nums[right];
-                    if (sum > Integer.MAX_VALUE || sum < Integer.MIN_VALUE) break;
                     
                     if (sum > target) right--;
                     else if (sum < target) left++;
