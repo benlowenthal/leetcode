@@ -10,9 +10,7 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        List<ListNode> list = new ArrayList<ListNode>(Arrays.asList(lists));
-        list.removeIf(n -> n == null);
-        lists = list.toArray(new ListNode[list.size()]);
+        lists = Arrays.stream(lists).filter(n -> n != null).toArray(ListNode[]::new);
        
         //base case
         if (lists.length == 0) return null;
