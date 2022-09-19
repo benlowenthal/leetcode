@@ -11,16 +11,19 @@ class Solution {
             else right = mid;
         }
         
-        right = left + nums.length - 1;
+        int k = left;
+        
+        left = 0;
+        right = nums.length - 1;
         
         //binary search for target
         while (right >= left) {
             int mid = (left + right) / 2;
-            mid = (mid < nums.length) ? mid : mid - nums.length;
+            int midRot = (k + mid < nums.length) ? k + mid : k + mid - nums.length;
             
-            if (nums[mid] > target) right--;
-            else if (nums[mid] < target) left++;
-            else return mid;
+            if (nums[midRot] > target) right = mid - 1;
+            else if (nums[midRot] < target) left = mid + 1;
+            else return midRot;
         }
         
         //if search complete but target not found
