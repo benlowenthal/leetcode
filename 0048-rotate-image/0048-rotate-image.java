@@ -2,7 +2,7 @@ class Solution {
     public void rotate(int[][] matrix) {
         int rows = matrix.length;
         int cols = matrix[0].length;
-        int temp;
+        int temp = 0;
         
         //flip on x=y
         for (int r = 0; r < rows; r++) {
