@@ -1,11 +1,7 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<Integer> list = new ArrayList<>();
-        
         for (int n : nums) list.add(n);
-        
-//         int solutions = 1;
-//         for (int x = 2; x <= nums.length; x++) solutions *= x;
         
         if (nums.length < 2) return List.of(list);
         
