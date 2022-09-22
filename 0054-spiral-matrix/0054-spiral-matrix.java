@@ -3,6 +3,7 @@ class Solution {
         return spiral(matrix);
     }
     
+    //recursively take outside numbers and generates list
     private List<Integer> spiral(int[][] matrix) {
         List<Integer> circle = new ArrayList<Integer>();
         
