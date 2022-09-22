@@ -9,7 +9,8 @@ class Solution {
         
         for (int[] pair : intervals) {
             if (pair[0] > high) {
-                if (low >= 0 && high >= 0) list.add(new int[] {low, high});
+                if (low >= 0 && high >= 0)
+                    list.add(new int[] {low, high});
                 low = pair[0];
             }
             
