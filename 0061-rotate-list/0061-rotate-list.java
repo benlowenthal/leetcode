@@ -21,6 +21,7 @@ class Solution {
         ListNode newHead = null;
         ListNode newTail = null;
         
+        //iterate and store new head and tail
         for (int i = 0; i < len; i++) {
             if (i == len - k - 1) {
                 newHead = next.next;
