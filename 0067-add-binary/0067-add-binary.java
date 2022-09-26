@@ -5,6 +5,7 @@ class Solution {
         int sum;
         int i = 0;
         int carry = 0;
+        
         while (i < a.length() || i < b.length()) {
             sum = carry;
             if (i < a.length() && a.charAt(a.length() - i - 1) == '1') sum++;
