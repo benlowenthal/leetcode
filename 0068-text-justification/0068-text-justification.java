@@ -8,6 +8,7 @@ class Solution {
         List<String> list = new ArrayList<>();
         list.add(words[0]);
         
+        //combine strings into lines up to maxWidth long
         for (int i = 1; i < words.length; i++) {
             String w = words[i];
             if (chars + w.length() + 1 <= maxWidth) {
@@ -22,8 +23,8 @@ class Solution {
         }
         if (list.size() > 0) s.add(list);
         
+        //join lines and add appropriate number of spaces
         List<String> out = new ArrayList<>();
-        
         for (int i = 0; i < s.size(); i++) {
             int spaces = maxWidth;
             for (String str : s.get(i)) spaces -= str.length();
