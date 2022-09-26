@@ -4,10 +4,12 @@ class Solution {
         
         long y = x;
         
+        //iterate toward sqrt(x)
         while (y * y > x) {
 		    y = (y + (x / y)) / 2;	
         }
         
+        //convert to integer
         return (int) y;
     }
 }
