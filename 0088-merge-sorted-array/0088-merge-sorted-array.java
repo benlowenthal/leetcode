@@ -3,6 +3,7 @@ class Solution {
         //combine arrays
         for (int x = 0; x < n; x++) nums1[m + x] = nums2[x];
         
+        //swap out of place values
         for (int j = m; j < m + n; j++)
             for (int i = 0; i < j; i++)
                 if (nums1[i] > nums1[j])
