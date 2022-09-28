@@ -3,6 +3,7 @@ class Solution {
         String[] dirs = path.split("/+");
         Stack<String> stk = new Stack<>();
         
+        //stack appropriate dir names
         for (int i = 0; i < dirs.length; i++) {
             if (dirs[i].equals("..") && !stk.empty())
                 stk.pop();
