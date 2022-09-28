@@ -8,7 +8,6 @@ class Solution {
             else if (n == 1) w++;
         }
         
-        //replace values if in range
         for (int i = 0; i < nums.length; i++) {
             if (i < r) nums[i] = 0;
             else if (i < r + w) nums[i] = 1;
