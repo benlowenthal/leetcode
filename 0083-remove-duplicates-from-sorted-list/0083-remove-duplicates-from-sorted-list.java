@@ -11,6 +11,7 @@
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         Set<Integer> set = new HashSet<>();
+        
         ListNode n = head;
         ListNode prev = head;
         while (n != null) {
